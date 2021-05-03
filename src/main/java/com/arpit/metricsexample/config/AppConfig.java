@@ -23,6 +23,9 @@ public class AppConfig {
     public MeterRegistry meterRegistry() {
         CompositeMeterRegistry meterRegistry = new CompositeMeterRegistry();
         meterRegistry.add(MonitoringSystemFactory.jmx());
+        /**
+         #management.metrics.export.datadog.api-key=d236e8f59c0f34a3ec7f932e8fa27947
+         */
 //        meterRegistry.add(MonitoringSystemFactory.datadog());
 //        meterRegistry.add(MonitoringSystemFactory.prometheus());
         return meterRegistry;
